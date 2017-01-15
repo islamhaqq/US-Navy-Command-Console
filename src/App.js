@@ -19,12 +19,7 @@ class App extends Component {
             <div className="DrawerMenu">
               <DrawerMenu />
             </div>
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>US Navy Command Console</h2>
           </div>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
         </div>
       </MuiThemeProvider>
     );
