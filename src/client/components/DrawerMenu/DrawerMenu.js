@@ -8,7 +8,7 @@ import {blue500} from 'material-ui/styles/colors';
 import AppBar from 'material-ui/AppBar';
 
 // import Sample Track Data
-import SampleTrackData from '../../data/SampleTrackData.json';
+import SampleTrackData from '../../../server/data/SampleTrackData.json';
 
 export default class DrawerMenu extends React.Component {
 
