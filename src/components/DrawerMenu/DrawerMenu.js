@@ -13,6 +13,16 @@ export default class DrawerMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {open: false};
+    this.vessels = [];
+
+    // parse SampleTrackData to populate MenuItems with vessel ids
+    for (var vessel in SampleTrackData.tracks) {
+      // filter unwanted properties
+      if (SampleTrackData.tracks.hasOwnProperty(vessel)) {
+        var id = SampleTrackData.tracks[vessel]._id;
+        this.vessels.push(<MenuItem onTouchTap={this.handleClose}>{id}</MenuItem>);
+      }
+    }
   }
 
   // handle drawer state
@@ -20,14 +30,6 @@ export default class DrawerMenu extends React.Component {
   handleClose = () => this.setState({open: false});
 
   render() {
-    var vessels = [];
-    for (var vessel in SampleTrackData.tracks) {
-      // filter unwanted properties
-      if (SampleTrackData.tracks.hasOwnProperty(vessel)) {
-        var id = SampleTrackData.tracks[vessel]._id;
-        vessels.push(<MenuItem onTouchTap={this.handleClose}>{id}</MenuItem>);
-      }
-    }
     return (
       <div>
         <IconButton onTouchTap={this.handleToggle}>
@@ -35,7 +37,7 @@ export default class DrawerMenu extends React.Component {
         </IconButton>
 
         <Drawer docked={false} width={300} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
-          {vessels}
+          {this.vessels}
         </Drawer>
       </div>
     );
