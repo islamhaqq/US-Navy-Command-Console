@@ -16,7 +16,9 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
-            <DrawerMenu />
+            <div className="DrawerMenu">
+              <DrawerMenu />
+            </div>
             <img src={logo} className="App-logo" alt="logo" />
             <h2>US Navy Command Console</h2>
           </div>
