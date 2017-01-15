@@ -24,12 +24,7 @@ export default class DrawerMenu extends React.Component {
           <Menu color={blue500}/>
         </IconButton>
 
-        <Drawer
-          docked={false}
-          width={200}
-          open={this.state.open}
-          onRequestChange={(open) => this.setState({open})}
-        >
+        <Drawer docked={false} width={200} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
           <MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
           <MenuItem onTouchTap={this.handleClose}>Menu Item 2</MenuItem>
         </Drawer>
