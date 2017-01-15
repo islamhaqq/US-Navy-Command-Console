@@ -24,10 +24,6 @@ export default class DrawerMenu extends React.Component {
           <Menu color={blue500}/>
         </IconButton>
 
-        <RaisedButton
-          label="Open Drawer"
-          onTouchTap={this.handleToggle}
-        />
         <Drawer
           docked={false}
           width={200}
