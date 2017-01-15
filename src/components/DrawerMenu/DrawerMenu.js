@@ -13,34 +13,6 @@ export default class DrawerMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {open: false};
-
-    // loop through SampleTrackData
-    function PopulateTrackList() {
-      for (var vessel in SampleTrackData.tracks) {
-        // filter unwanted properties
-        if (SampleTrackData.tracks.hasOwnProperty(vessel)) {
-          var id = SampleTrackData.tracks[vessel]._id;
-          console.log(id);
-        }
-      }
-    }
-    PopulateTrackList();
-
-    // function PopulateTrackList(SampleTrackData) {
-    //   return SampleTrackData.map((article, index) => (
-    //       <Article key={index} article={article} />
-    //   ));
-    // }
-    //
-    // const Article = ({article}) => {
-    //     return (
-    //         <article key={article.id}>
-    //             <a href={article.link}>{article.title}</a>
-    //             <p>{article.description}</p>
-    //         </article>
-    //     );
-    // };
-
   }
 
   // handle drawer state
@@ -48,15 +20,22 @@ export default class DrawerMenu extends React.Component {
   handleClose = () => this.setState({open: false});
 
   render() {
+    var vessels = [];
+    for (var vessel in SampleTrackData.tracks) {
+      // filter unwanted properties
+      if (SampleTrackData.tracks.hasOwnProperty(vessel)) {
+        var id = SampleTrackData.tracks[vessel]._id;
+        vessels.push(<MenuItem onTouchTap={this.handleClose}>{id}</MenuItem>);
+      }
+    }
     return (
       <div>
         <IconButton onTouchTap={this.handleToggle}>
           <Menu color={blue500}/>
         </IconButton>
 
-        <Drawer docked={false} width={200} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>Menu Item 2</MenuItem>
+        <Drawer docked={false} width={300} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
+          {vessels}
         </Drawer>
       </div>
     );
