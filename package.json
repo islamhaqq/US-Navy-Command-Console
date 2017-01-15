@@ -8,7 +8,7 @@
   "dependencies": {
     "express": "^4.14.0",
     "material-ui": "^0.16.6",
-    "mongodb": "^2.2.21",
+    "mongoose": "^4.7.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
