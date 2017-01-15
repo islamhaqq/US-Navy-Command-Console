@@ -4,6 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import IconButton from 'material-ui/IconButton';
 import {blue500} from 'material-ui/styles/colors';
+import AppBar from 'material-ui/AppBar';
 
 // import Sample Track Data
 import SampleTrackData from '../../data/SampleTrackData.json';
@@ -37,6 +38,7 @@ export default class DrawerMenu extends React.Component {
         </IconButton>
 
         <Drawer docked={false} width={300} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
+          <AppBar title="Track List" showMenuIconButton={false}/>
           {this.vessels}
         </Drawer>
       </div>
