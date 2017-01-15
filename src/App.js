@@ -15,10 +15,8 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <div className="App-header">
-            <div className="DrawerMenu">
-              <DrawerMenu />
-            </div>
+          <div className="Menu">
+            <DrawerMenu />
           </div>
         </div>
       </MuiThemeProvider>
