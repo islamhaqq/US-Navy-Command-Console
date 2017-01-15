@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import IconButton from 'material-ui/IconButton';
 
-import s from './style.css';
+import s from './DrawerMenu.css';
 
 export default class DrawerMenu extends React.Component {
 
