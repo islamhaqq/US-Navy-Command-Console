@@ -1,7 +1,6 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import IconButton from 'material-ui/IconButton';
 import {red500, yellow500, blue500} from 'material-ui/styles/colors';
@@ -13,8 +12,8 @@ export default class DrawerMenu extends React.Component {
     this.state = {open: false};
   }
 
+  // handle drawer state
   handleToggle = () => this.setState({open: !this.state.open});
-
   handleClose = () => this.setState({open: false});
 
   render() {
