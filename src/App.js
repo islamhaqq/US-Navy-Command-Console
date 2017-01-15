@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// import Components
+import DrawerMenu from './components/DrawerMenu/DrawerMenu.js';
+
 // Material UI
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -13,6 +16,7 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
+            <DrawerMenu />
             <img src={logo} className="App-logo" alt="logo" />
             <h2>US Navy Command Console</h2>
           </div>
