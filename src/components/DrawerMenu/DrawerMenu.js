@@ -4,8 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import IconButton from 'material-ui/IconButton';
-
-import s from './DrawerMenu.css';
+import {red500, yellow500, blue500} from 'material-ui/styles/colors';
 
 export default class DrawerMenu extends React.Component {
 
@@ -21,8 +20,8 @@ export default class DrawerMenu extends React.Component {
   render() {
     return (
       <div>
-        <IconButton onTouchTap={this.handleToggle} style={s}>
-          <Menu />
+        <IconButton onTouchTap={this.handleToggle}>
+          <Menu color={blue500}/>
         </IconButton>
 
         <RaisedButton
