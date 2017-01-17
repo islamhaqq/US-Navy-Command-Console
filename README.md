@@ -3,6 +3,8 @@
 ## How to Run
 
 ```console
+git clone https://github.com/SyedAman/US-Navy-Command-Console.git
+npm install
 npm start
 ```
 
