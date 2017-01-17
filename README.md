@@ -1,5 +1,11 @@
 # MERN Stack Project: US Navy Command Console
 
+## How to Run
+
+```console
+npm start
+```
+
 ## Prompt
 
 We wanted to give you something that wasn't going to take you too terribly long to create, but at the same time we wanted to give you something that would allow you to show all of your coding skills. What we came up with is a stripped-down version of one of our core applications, our map. What we would like you to do is to create a single page app containing a map that spans the entire width and height of the browser. I have attached some sample track data that we would like you to store in MongoDB and serve up to the web app view NodeJS and ExpressJS. We'd like you to plot these tracks on the map using a directional icon (an icon that shows the direction the track is facing) and use the "course" value of the track to determine the direction.
