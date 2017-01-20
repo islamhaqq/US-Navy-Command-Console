@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 // import Components
-import DrawerMenu from './components/DrawerMenu/DrawerMenu.js';
+import DrawerMenu from '../DrawerMenu/DrawerMenu.js';
 
 // Material UI
 import injectTapEventPlugin from 'react-tap-event-plugin';
